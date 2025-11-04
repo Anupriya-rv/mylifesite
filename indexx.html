@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Life Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌱 My Life Dashboard</h1>
+    <nav>
+      <button onclick="showSection('study')">Study Plan</button>
+      <button onclick="showSection('goals')">Goals</button>
+      <button onclick="showSection('notes')">Notes</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="study" class="active">
+      <h2>📚 Study Plan</h2>
+      <input id="studyInput" placeholder="Add a new study task...">
+      <button onclick="addItem('study')">Add</button>
+      <ul id="studyList"></ul>
+    </section>
+
+    <section id="goals">
+      <h2>🎯 Goals</h2>
+      <input id="goalInput" placeholder="Add a new goal...">
+      <button onclick="addItem('goals')">Add</button>
+      <ul id="goalsList"></ul>
+    </section>
+
+    <section id="notes">
+      <h2>🧘 Life Notes</h2>
+      <textarea id="noteText" placeholder="Write your thoughts..."></textarea>
+      <button onclick="saveNote()">Save Note</button>
+      <div id="savedNotes"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>✨ Built by Me | My Personal Life Planner ✨</p>
+  </footer>
+
+  <script src="ks.js"></script>
+</body>
+</html>
